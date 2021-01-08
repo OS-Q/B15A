@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.7"
+
+env:
+  - PLATFORMIO_PROJECT_DIR=project/arduino-blink
+  - PLATFORMIO_PROJECT_DIR=project/esp8266-rtos-sdk-blink
+  - PLATFORMIO_PROJECT_DIR=project/esp8266-nonos-sdk-blink
+  - PLATFORMIO_PROJECT_DIR=project/simba-blink
+install:
+  - pip install -U https://github.com/OS-Q/S03/archive/master.zip
+  - platformio platform install https://github.com/OS-Q/P04.git
+
+script:
+  - platformio run -s -d $PLATFORMIO_PROJECT_DIR
+
+notifications:
+  email: false
