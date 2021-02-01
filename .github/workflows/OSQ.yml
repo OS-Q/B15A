@@ -9,11 +9,11 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.7]
-        example:
-          - "examples/arduino-blink"
-          - "examples/arduino-wifiscan"
-          - "examples/native-blink"
-          - "examples/freertos-blink"
+        projects:
+          - "projects/arduino-blink"
+          - "projects/arduino-wifiscan"
+          - "projects/native-blink"
+          - "projects/freertos-blink"
 
     runs-on: ${{ matrix.os }}
     steps:

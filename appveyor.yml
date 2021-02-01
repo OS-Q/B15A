@@ -2,10 +2,10 @@ build: off
 environment:
 
   matrix:
-    - PLATFORMIO_PROJECT_DIR: "examples/arduino-blink"
-    - PLATFORMIO_PROJECT_DIR: "examples/arduino-wifiscan"
-    - PLATFORMIO_PROJECT_DIR: "examples/freertos-blink"
-    - PLATFORMIO_PROJECT_DIR: "examples/native-blink"
+    - PLATFORMIO_PROJECT_DIR: "projects/arduino-blink"
+    - PLATFORMIO_PROJECT_DIR: "projects/arduino-wifiscan"
+    - PLATFORMIO_PROJECT_DIR: "projects/freertos-blink"
+    - PLATFORMIO_PROJECT_DIR: "projects/native-blink"
 
 install:
   - cmd: git submodule update --init --recursive

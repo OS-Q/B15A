@@ -3,10 +3,10 @@ python:
   - "3.7"
 
 env:
-  - PLATFORMIO_PROJECT_DIR=examples/arduino-blink
-  - PLATFORMIO_PROJECT_DIR=examples/arduino-wifiscan
-  - PLATFORMIO_PROJECT_DIR=examples/freertos-blink
-  - PLATFORMIO_PROJECT_DIR=examples/native-blink
+  - PLATFORMIO_PROJECT_DIR=projects/arduino-blink
+  - PLATFORMIO_PROJECT_DIR=projects/arduino-wifiscan
+  - PLATFORMIO_PROJECT_DIR=projects/freertos-blink
+  - PLATFORMIO_PROJECT_DIR=projects/native-blink
 
 install:
   - pip install -U https://github.com/OS-Q/S03/archive/master.zip
