@@ -10,10 +10,12 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.7]
         projects:
-          - "projects/arduino-blink"
-          - "projects/arduino-wifiscan"
           - "projects/native-blink"
           - "projects/freertos-blink"
+          - "projects/arduino-blink"
+          - "projects/arduino-asyncudp"
+          - "projects/arduino-webserver"
+          - "projects/arduino-wifiscan"
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -31,4 +33,4 @@ jobs:
           platformio platform install https://github.com/OS-Q/P15.git
       - name: Build B15
         run: |
-          platformio run -d ${{ matrix.project }}
+          platformio run -d ${{ matrix.projects }}
