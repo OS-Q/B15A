@@ -67,7 +67,7 @@ void setup()
             packet.printf("Got %u bytes of data", packet.length());
         });
         //Send unicast
-        udp.print("Hello Server!");
+        udp.print("Hello Server!\n");
     }
 }
 
@@ -80,9 +80,9 @@ void setup()
 
 void loop()
 {
-    delay(1000);
+    delay(3000);
     //Send broadcast on port 1234
-    udp.broadcastTo("Anyone here?", 1234);
+    udp.broadcastTo("Anyone here?\n", 1234);
 }
 
 /*---------------------------(C) COPYRIGHT 2021 OS-Q -------------------------*/
