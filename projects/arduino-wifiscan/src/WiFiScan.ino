@@ -1,8 +1,11 @@
-/*
- *  This sketch demonstrates how to scan WiFi networks.
- *  The API is almost the same as with the WiFi Shield library,
- *  the most obvious difference being the different file you need to include:
- */
+/*******************************************************************************
+****版本：V1.0.0
+****平台：ESP8266
+****日期：2021-01-31
+****作者：Qitas
+****版权：OS-Q
+*******************************************************************************/
+
 #include "ESP8266WiFi.h"
 
 void setup()
@@ -46,3 +49,5 @@ void loop()
     // Wait a bit before scanning again
     delay(5000);
 }
+
+/*---------------------------(C) COPYRIGHT 2021 OS-Q -------------------------*/

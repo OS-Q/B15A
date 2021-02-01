@@ -1,3 +1,11 @@
+/*******************************************************************************
+****版本：V1.0.0
+****平台：ESP8266
+****日期：2021-01-31
+****作者：Qitas
+****版权：OS-Q
+*******************************************************************************/
+
 #include "osapi.h"
 #include "user_interface.h"
 
@@ -53,7 +61,12 @@ user_rf_cal_sector_set(void)
     }
     return rf_cal_sec;
 }
-
+/*******************************************************************************
+**函数信息 ：
+**功能描述 ：
+**输入参数 ：
+**输出参数 ：
+*******************************************************************************/
 void blinky(void *arg)
 {
 	static uint8_t state = 0;
@@ -65,7 +78,12 @@ void blinky(void *arg)
 	}
 	state ^= 1;
 }
-
+/*******************************************************************************
+**函数信息 ：
+**功能描述 ：
+**输入参数 ：
+**输出参数 ：
+*******************************************************************************/
 void ICACHE_FLASH_ATTR user_init(void)
 {
     gpio_init();
@@ -74,7 +92,7 @@ void ICACHE_FLASH_ATTR user_init(void)
     os_printf("SDK version:%s\n", system_get_sdk_version());
 
     // Disable WiFi
-    	wifi_set_opmode(NULL_MODE);
+    wifi_set_opmode(NULL_MODE);
 
     PIN_FUNC_SELECT(PERIPHS_IO_MUX_GPIO2_U, FUNC_GPIO2);
 
@@ -82,3 +100,5 @@ void ICACHE_FLASH_ATTR user_init(void)
     os_timer_setfn(&ptimer, (os_timer_func_t *)blinky, NULL);
     os_timer_arm(&ptimer, 2000, 1);
 }
+
+/*---------------------------(C) COPYRIGHT 2021 OS-Q -------------------------*/

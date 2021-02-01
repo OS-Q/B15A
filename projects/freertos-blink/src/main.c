@@ -1,3 +1,11 @@
+/*******************************************************************************
+****版本：V1.0.0
+****平台：ESP8266
+****日期：2021-01-31
+****作者：Qitas
+****版权：OS-Q
+*******************************************************************************/
+
 #include "esp_common.h"
 #include "freertos/task.h"
 #include "gpio.h"
@@ -44,17 +52,22 @@ uint32 user_rf_cal_sector_set(void)
 
     return rf_cal_sec;
 }
-
+/*******************************************************************************
+**函数信息 ：
+**功能描述 ：
+**输入参数 ：
+**输出参数 ：
+*******************************************************************************/
 void task_blink(void* ignore)
 {
     gpio16_output_conf();
-    while(true) {
-    	gpio16_output_set(0);
+    while(true)
+    {
+        gpio16_output_set(0);
         vTaskDelay(1000/portTICK_RATE_MS);
-    	gpio16_output_set(1);
+        gpio16_output_set(1);
         vTaskDelay(1000/portTICK_RATE_MS);
     }
-
     vTaskDelete(NULL);
 }
 
@@ -69,3 +82,4 @@ void user_init(void)
     xTaskCreate(&task_blink, "startup", 2048, NULL, 1, NULL);
 }
 
+/*---------------------------(C) COPYRIGHT 2021 OS-Q -------------------------*/

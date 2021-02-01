@@ -1,3 +1,11 @@
+/*******************************************************************************
+****版本：V1.0.0
+****平台：ESP8266
+****日期：2021-01-31
+****作者：Qitas
+****版权：OS-Q
+*******************************************************************************/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -68,6 +76,9 @@ void setup(void){
   Serial.println("HTTP server started");
 }
 
-void loop(void){
+void loop(void)
+{
   server.handleClient();
 }
+
+/*---------------------------(C) COPYRIGHT 2021 OS-Q -------------------------*/

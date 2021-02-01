@@ -6,12 +6,15 @@ environment:
     - PLATFORMIO_PROJECT_DIR: "projects/arduino-wifiscan"
     - PLATFORMIO_PROJECT_DIR: "projects/freertos-blink"
     - PLATFORMIO_PROJECT_DIR: "projects/native-blink"
+    - PLATFORMIO_PROJECT_DIR: "projects/arduino-asyncudp"
+    - PLATFORMIO_PROJECT_DIR: "projects/arduino-webserver"
 
 install:
   - cmd: git submodule update --init --recursive
-  - cmd: SET PATH=C:\Python36\Scripts;%PATH%
+  - cmd: SET PATH=C:\Python37\Scripts;%PATH%
   - cmd: pip3 install -U https://github.com/OS-Q/S03/archive/master.zip
   - cmd: platformio platform install https://github.com/OS-Q/P15.git
 
 test_script:
   - cmd: platformio run -s -d %PLATFORMIO_PROJECT_DIR%
+
