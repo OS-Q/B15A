@@ -12,7 +12,7 @@ env:
 
 install:
   - pip install -U https://github.com/OS-Q/S03/archive/master.zip
-  - platformio platform install https://github.com/OS-Q/P15.git
+  - platformio platform install https://github.com/OS-Q/P51.git
 
 script:
   - platformio run -s -d $PLATFORMIO_PROJECT_DIR
